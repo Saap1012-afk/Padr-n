@@ -1,0 +1,30 @@
+input[type="file"] {
+    position: relative;
+    display: inline-block;
+    width: 250px; /* Ancho del botón personalizado */
+    height: 40px; /* Altura del botón personalizado */
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    border: none;
+    color: white; /* Color del texto */
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px; 
+}
+
+input[type="file"]::before {
+    content: 'Seleccione archivo';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    text-align: center;
+    line-height: 28px; /* Alineación vertical del texto */
+    color: white;
+    pointer-events: none; 
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
